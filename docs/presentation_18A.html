@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Topic 18A: Collision Theory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/simple.min.css">
+    <style>
+        .reveal h1,
+        .reveal h2,
+        .reveal h3 {
+            text-transform: none;
+            font-family: 'Merriweather', serif;
+        }
+
+        .reveal p,
+        .reveal li {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .formula {
+            background-color: #f1f5f9;
+            padding: 10px;
+            border-radius: 8px;
+            font-family: monospace;
+            color: #2563eb;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Topic 18A</h1>
+                <h3>Collision Theory</h3>
+                <p>Reaction Dynamics</p>
+            </section>
+
+            <section>
+                <h2>Core Concepts</h2>
+                <ul>
+                    <li>Collision Frequency ($Z_{AB}$)</li>
+                    <li>Steric Factor ($P$)</li>
+                    <li>Activation Energy ($E_a$)</li>
+                    <li>Arrhenius Equation</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Collision Density</h2>
+                <p>The number of collisions per unit volume per unit time:</p>
+                <div class="formula">
+                    $$Z_{AB} = \sigma \left(\frac{8k_BT}{\pi \mu}\right)^{1/2} N_A^2 [A][B]$$
+                </div>
+                <p style="font-size: 0.8em; margin-top: 20px;">Where $\sigma$ is the collision cross-section and $\mu$
+                    is the reduced mass.</p>
+            </section>
+
+            <section>
+                <h2>The Steric Factor ($P$)</h2>
+                <p>Not all collisions lead to reaction.</p>
+                <ul>
+                    <li>Orientation matters!</li>
+                    <li>$P$ represents the fraction of collisions with the correct orientation.</li>
+                    <li>Usually $P \ll 1$ for complex molecules.</li>
+                    <li>"Harpoon Mechanism" can lead to $P > 1$.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Interactive Demo</h2>
+                <p>Check out the Jupyter Notebook for a live simulation of collision frequencies.</p>
+                <a href="https://colab.research.google.com/github/mcbadlon31/Reaction-Dynamics-Physical-Chemistry/blob/main/notebooks/01_Collision_Theory.ipynb"
+                    target="_blank">Open Notebook</a>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            plugins: [RevealMath.KaTeX]
+        });
+    </script>
+</body>
+
+</html>

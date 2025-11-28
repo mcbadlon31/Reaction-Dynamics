@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Joubert"
+  given-names: "Mark"
+title: "Reaction Dynamics - Physical Chemistry Interactive Course"
+version: 1.0.0
+date-released: 2024-11-25
+url: "https://github.com/mcbadlon31/Reaction-Dynamics-Physical-Chemistry"
