@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction Dynamics - Physical Chemistry</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Placeholder for FontAwesome -->
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1>Reaction Dynamics</h1>
+            <p class="subtitle">Interactive Physical Chemistry Course Materials</p>
+            <div class="hero-buttons">
+                <a href="#notebooks" class="btn btn-primary">Get Started</a>
+                <a href="https://github.com/mcbadlon31/Reaction-Dynamics-Physical-Chemistry" class="btn btn-secondary" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="overview" class="section">
+            <h2>Overview</h2>
+            <p>Welcome to the interactive companion for <strong>Focus 18: Reaction Dynamics</strong>. This platform provides access to interactive Jupyter notebooks, high-quality visualizations, and comprehensive lecture materials designed to enhance the learning experience in physical chemistry.</p>
+        </section>
+
+        <section id="notebooks" class="section">
+            <h2>Interactive Notebooks</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="topic-tag">18A</span>
+                        <h3>Collision Theory</h3>
+                    </div>
+                    <p>Explore collision frequency, the harpoon mechanism, and the RRK model.</p>
+                    <a href="https://colab.research.google.com/github/mcbadlon31/Reaction-Dynamics-Physical-Chemistry/blob/main/notebooks/01_Collision_Theory.ipynb" target="_blank" class="btn btn-sm">Open in Colab</a>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span class="topic-tag">18B</span>
+                        <h3>Diffusion-Controlled Reactions</h3>
+                    </div>
+                    <p>Simulate diffusion processes and understand the Smoluchowski limit.</p>
+                    <a href="https://colab.research.google.com/github/mcbadlon31/Reaction-Dynamics-Physical-Chemistry/blob/main/notebooks/02_Diffusion_Controlled.ipynb" target="_blank" class="btn btn-sm">Open in Colab</a>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span class="topic-tag">18C</span>
+                        <h3>Transition-State Theory</h3>
+                    </div>
+                    <p>Visualize potential energy surfaces and calculate kinetic isotope effects.</p>
+                    <a href="https://colab.research.google.com/github/mcbadlon31/Reaction-Dynamics-Physical-Chemistry/blob/main/notebooks/03_Transition_State_Theory.ipynb" target="_blank" class="btn btn-sm">Open in Colab</a>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span class="topic-tag">18D</span>
+                        <h3>Molecular Collision Dynamics</h3>
+                    </div>
+                    <p>Dive into the dynamics of molecular collisions and scattering.</p>
+                    <a href="https://colab.research.google.com/github/mcbadlon31/Reaction-Dynamics-Physical-Chemistry/blob/main/notebooks/04_Molecular_Dynamics.ipynb" target="_blank" class="btn btn-sm">Open in Colab</a>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <span class="topic-tag">18E</span>
+                        <h3>Electron Transfer</h3>
+                    </div>
+                    <p>Master Marcus theory and electron transfer mechanisms.</p>
+                    <a href="https://colab.research.google.com/github/mcbadlon31/Reaction-Dynamics-Physical-Chemistry/blob/main/notebooks/05_Electron_Transfer.ipynb" target="_blank" class="btn btn-sm">Open in Colab</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="interactive-tool" class="section">
+            <h2>Interactive Rate Calculator</h2>
+            <p>Calculate the rate constant ($k$) using the Arrhenius equation: $k = A e^{-E_a/RT}$</p>
+            <div class="calculator-box">
+                <div class="input-group">
+                    <label for="pre-exponential">Pre-exponential Factor ($A$):</label>
+                    <input type="number" id="pre-exponential" value="1e13" step="any">
+                </div>
+                <div class="input-group">
+                    <label for="activation-energy">Activation Energy ($E_a$ in kJ/mol):</label>
+                    <input type="number" id="activation-energy" value="50">
+                </div>
+                <div class="input-group">
+                    <label for="temperature">Temperature ($T$ in K):</label>
+                    <input type="range" id="temperature" min="200" max="1000" value="298">
+                    <span id="temp-display">298 K</span>
+                </div>
+                <div class="result-group">
+                    <strong>Rate Constant ($k$):</strong>
+                    <span id="rate-result">Calculating...</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Reaction Dynamics Project. Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
