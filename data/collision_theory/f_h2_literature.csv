@@ -1,0 +1,14 @@
+temperature_K,rate_constant_M_inv_s_inv,reference
+190,1.20e+10,Polanyi_1972
+220,1.45e+10,Polanyi_1972
+250,1.68e+10,Polanyi_1972
+280,1.89e+10,Polanyi_1972
+300,2.01e+10,Polanyi_1972
+320,2.13e+10,Polanyi_1972
+350,2.29e+10,Polanyi_1972
+400,2.56e+10,Lee_1985
+450,2.80e+10,Lee_1985
+500,3.02e+10,Lee_1985
+600,3.40e+10,Herschbach_1987
+700,3.73e+10,Herschbach_1987
+800,4.02e+10,Herschbach_1987

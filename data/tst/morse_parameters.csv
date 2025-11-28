@@ -1,0 +1,9 @@
+molecule,D_e_kJ_mol,R_e_angstrom,beta_inv_angstrom,omega_e_cm_inv,ZPE_kJ_mol,source
+H2,458.39,0.741,1.944,4401.2,52.65,Badlon (2018) Table 1
+HI,308.47,1.609,1.751,2309.0,27.62,Badlon (2018) Table 1
+I2,150.1,2.666,1.657,214.5,2.57,Badlon (2018) Table 1
+HF,574.67,0.917,2.298,4138.3,49.48,Huber & Herzberg (1979)
+HCl,458.79,1.27455,1.8685,2990.946,35.78,Huber & Herzberg (1979)
+HBr,396.47,1.414,1.811,2649.67,31.70,Huber & Herzberg (1979)
+N2,228.41,1.0977,2.689,2358.57,28.21,Huber & Herzberg (1979)
+ICl,50.1436,2.32087,1.8496,384.29,4.60,Huber & Herzberg (1979)

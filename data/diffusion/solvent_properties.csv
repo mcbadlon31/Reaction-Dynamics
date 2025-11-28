@@ -1,0 +1,16 @@
+solvent,viscosity_cP_298K,dielectric_constant,polarity_index,cost_per_L_USD,safety_rating
+water,0.890,78.4,10.2,1,5
+methanol,0.544,32.7,5.1,8,3
+ethanol,1.074,24.5,5.2,12,4
+acetone,0.306,20.7,5.1,15,3
+acetonitrile,0.341,37.5,5.8,25,2
+DMF,0.802,36.7,6.4,30,2
+DMSO,1.996,46.7,7.2,35,3
+glycerol,934.0,42.5,5.9,20,5
+hexane,0.300,1.9,0.1,10,2
+toluene,0.560,2.4,2.4,18,2
+chloroform,0.537,4.8,4.1,22,1
+dichloromethane,0.413,8.9,3.1,20,2
+THF,0.456,7.6,4.0,28,2
+ethyl_acetate,0.423,6.0,4.4,15,4
+diethyl_ether,0.224,4.3,2.8,25,2

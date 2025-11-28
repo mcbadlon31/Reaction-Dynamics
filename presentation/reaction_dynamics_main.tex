@@ -1,0 +1,463 @@
+% ============================================================================
+% FOCUS 18: REACTION DYNAMICS
+% Complete Beamer Presentation
+% ============================================================================
+
+\documentclass[aspectratio=169,12pt]{beamer}
+
+% ============================================================================
+% PACKAGES
+% ============================================================================
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{chemformula}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{qrcode}
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+% TikZ libraries
+\usetikzlibrary{arrows.meta,positioning,shapes,decorations.pathmorphing,decorations.markings,calc}
+\pgfplotsset{compat=1.18}
+
+% ============================================================================
+% THEME AND COLORS
+% ============================================================================
+\usetheme{Madrid}
+\usecolortheme{default}
+
+% Custom colors
+\definecolor{darkblue}{RGB}{0,51,102}
+\definecolor{lightblue}{RGB}{102,178,255}
+\definecolor{darkred}{RGB}{153,0,0}
+\definecolor{darkorange}{RGB}{204,102,0}
+\definecolor{darkgreen}{RGB}{0,102,51}
+
+\setbeamercolor{structure}{fg=darkblue}
+\setbeamercolor{frametitle}{fg=white,bg=darkblue}
+\setbeamercolor{title}{fg=white,bg=darkblue}
+\setbeamercolor{block title}{fg=white,bg=darkblue}
+\setbeamercolor{block body}{bg=lightblue!10}
+
+% ============================================================================
+% CUSTOM COMMANDS
+% ============================================================================
+\input{custom_commands.tex}
+
+% ============================================================================
+% TITLE INFORMATION
+% ============================================================================
+\title[Focus 18: Reaction Dynamics]{Focus 18: Reaction Dynamics}
+\subtitle{From Collisions to Electron Transfer}
+\author{Physical Chemistry Course}
+\institute{Mindanao State University -- Iligan Institute of Technology}
+\date{\today}
+
+% ============================================================================
+% DOCUMENT
+% ============================================================================
+\begin{document}
+
+% Title slide
+\begin{frame}
+\titlepage
+\end{frame}
+
+% Table of contents
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+% ============================================================================
+% INTRODUCTION
+% ============================================================================
+\section{Introduction}
+
+\begin{frame}{What is Reaction Dynamics?}
+
+\textbf{Reaction Dynamics} studies the \alert{detailed molecular mechanisms} of chemical reactions
+
+\vspace{0.3cm}
+
+\begin{columns}[T]
+
+\column{0.5\textwidth}
+
+\textbf{Beyond traditional kinetics:}
+
+\begin{itemize}
+\item How do molecules collide?
+\item What happens during collision?
+\item Where does energy go?
+\item What is the reaction path?
+\item How fast can reactions be?
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Time scales:}
+\begin{itemize}
+\item Bond vibrations: fs ($10^{-15}$ s)
+\item Reactions: ps-ns ($10^{-12}$-$10^{-9}$ s)
+\item Diffusion: ns-$\mu$s
+\end{itemize}
+
+\column{0.5\textwidth}
+
+\begin{tikzpicture}[scale=0.8]
+% Simple reaction coordinate diagram
+\begin{axis}[
+    width=6cm,
+    height=5.5cm,
+    xlabel={Reaction coordinate},
+    ylabel={Energy},
+    xmin=0, xmax=10,
+    ymin=0, ymax=100,
+    grid=none,
+    axis lines=left,
+    xtick=\empty,
+    ytick=\empty,
+    thick
+]
+
+% Energy profile
+\addplot[blue,very thick,domain=0:10,samples=100] {
+    20 + 60*exp(-((x-5)^2)/2)
+};
+
+% Reactants
+\node[circle,fill=blue!30] at (axis cs:1,22) {A};
+\node[circle,fill=red!30] at (axis cs:1.5,22) {B};
+\draw[-{Stealth[length=3mm]},thick] (axis cs:1.25,22) -- (axis cs:2.5,22);
+
+% Transition state
+\node[circle,fill=orange!30] at (axis cs:5,82) {};
+\draw[dashed] (axis cs:5,0) -- (axis cs:5,82);
+\node[above,font=\small] at (axis cs:5,82) {[\ch{AB}]$^{\ddagger}$};
+
+% Products
+\node[circle,fill=green!30] at (axis cs:9,72) {AB};
+
+\end{axis}
+\end{tikzpicture}
+
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{The Journey Through Focus 18}
+
+\vspace{-0.5cm}
+\begin{center}
+\begin{tikzpicture}[
+    node distance=0.45cm,
+    topic/.style={rectangle,draw,fill=blue!20,text width=2.2cm,align=center,minimum height=0.6cm,font=\footnotesize},
+    arrow/.style={-{Stealth[length=1.2mm]},thick}
+]
+
+% Topics
+\node[topic,fill=blue!30] (18A) {\small 18A: Collision};
+\node[topic,fill=cyan!30,below=of 18A] (18B) {\small 18B: Diffusion};
+\node[topic,fill=green!30,below=of 18B] (18C) {\small 18C: TST};
+\node[topic,fill=yellow!30,below=of 18C] (18D) {\small 18D: Dynamics};
+\node[topic,fill=orange!30,below=of 18D] (18E) {\small 18E: ET};
+
+% Arrows
+\draw[arrow] (18A) -- (18B);
+\draw[arrow] (18B) -- (18C);
+\draw[arrow] (18C) -- (18D);
+\draw[arrow] (18D) -- (18E);
+
+% Compact side annotations
+\node[right=1.2cm of 18A,font=\tiny] {Gas phase};
+\node[right=1.2cm of 18B,font=\tiny] {Liquids};
+\node[right=1.2cm of 18C,font=\tiny] {Thermo+kinetics};
+\node[right=1.2cm of 18D,font=\tiny] {Molecular beams};
+\node[right=1.2cm of 18E,font=\tiny] {Marcus theory};
+
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
+
+\begin{frame}{Learning Objectives}
+
+By the end of this topic, you should be able to:
+
+\begin{enumerate}
+\item Calculate collision frequencies and reaction cross-sections from molecular properties
+
+\item Distinguish between diffusion-controlled and activation-controlled reactions
+
+\item Apply transition-state theory to calculate rate constants from thermodynamic parameters
+
+\item Interpret kinetic isotope effects and quantum tunneling in chemical reactions
+
+\item Analyze molecular beam experiments and potential energy surfaces
+
+\item Apply Marcus theory to electron transfer reactions and predict rates
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Prerequisites - Quick Reminder}
+
+\textbf{From earlier topics, you should know:}
+
+\vspace{0.3cm}
+
+\begin{columns}[T]
+
+\column{0.5\textwidth}
+
+\textbf{Kinetic Theory:}
+\begin{itemize}
+\item Maxwell-Boltzmann distribution
+\item Mean speeds: $\bar{v} = \sqrt{8kT/\pi m}$
+\item Collision frequency
+\end{itemize}
+
+\vspace{0.2cm}
+
+\textbf{Chemical Kinetics:}
+\begin{itemize}
+\item Rate laws and rate constants
+\item Arrhenius equation: $k = Ae^{-E_a/RT}$
+\item Reaction mechanisms
+\end{itemize}
+
+\column{0.5\textwidth}
+
+\textbf{Thermodynamics:}
+\begin{itemize}
+\item Gibbs energy: $\Delta G = \Delta H - T\Delta S$
+\item Equilibrium constants
+\item Standard states
+\end{itemize}
+
+\vspace{0.2cm}
+
+\textbf{Statistical Mechanics:}
+\begin{itemize}
+\item Partition functions
+\item Boltzmann distribution
+\item Energy levels
+\end{itemize}
+
+\end{columns}
+
+\end{frame}
+
+% ============================================================================
+% INCLUDE TOPIC FILES
+% ============================================================================
+\input{topic_18A.tex}
+\input{topic_18B.tex}
+\input{topic_18C.tex}
+\input{topic_18D.tex}
+\input{topic_18E.tex}
+
+% ============================================================================
+% SUMMARY
+% ============================================================================
+\section{Summary and Conclusions}
+
+\begin{frame}{Comparison of Theories}
+
+\small
+\begin{table}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Theory} & \textbf{Collision} & \textbf{Diffusion} & \textbf{TST} & \textbf{Marcus} \\
+\midrule
+Phase & Gas & Liquid & All & All \\
+\addlinespace
+Key parameter & $\sigma$, $E_a$ & $D$, $\eta$ & $\Delta^{\ddagger} G^{\circ}$ & $\lambda$ \\
+\addlinespace
+Rate equation & $\sigma v e^{-E_a/RT}$ & $4\pi RD$ & $\frac{kT}{h}e^{-\Delta G^{\ddagger}/RT}$ & $|H_{AB}|^2 e^{-\Delta G^{\ddagger}/RT}$ \\
+\addlinespace
+Entropy? & No & No & \textbf{Yes} & \textbf{Yes} \\
+\addlinespace
+Quantum? & No & No & Limited & \textbf{Yes} \\
+\addlinespace
+Best for & Simple gas rxns & Fast rxns & General & ET \\
+\bottomrule
+\end{tabular}
+\end{table}
+\normalsize
+
+\vspace{0.3cm}
+
+\emphbox{Each theory has its domain of applicability}
+
+\end{frame}
+
+\begin{frame}{Common Themes}
+
+\textbf{Throughout Focus 18:}
+
+\vspace{0.3cm}
+
+\begin{enumerate}
+\item \textbf{Energy matters}
+\begin{itemize}
+\item Activation barriers control rates
+\item Energy distribution among modes
+\item Quantum vs. classical regimes
+\end{itemize}
+
+\vspace{0.2cm}
+
+\item \textbf{Geometry matters}
+\begin{itemize}
+\item Molecular orientation (steric factors)
+\item Potential energy surfaces
+\item Reaction paths
+\end{itemize}
+
+\vspace{0.2cm}
+
+\item \textbf{Potential energy surfaces}
+\begin{itemize}
+\item Central concept in all theories
+\item Saddle points = transition states
+\item Guide reaction dynamics
+\end{itemize}
+
+\vspace{0.2cm}
+
+\item \textbf{Quantum effects}
+\begin{itemize}
+\item Tunneling (H-transfer, ET)
+\item Zero-point energy (KIE)
+\item Electronic coupling
+\end{itemize}
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Applications}
+
+\textbf{Reaction dynamics principles apply to:}
+
+\vspace{0.3cm}
+
+\begin{columns}[T]
+
+\column{0.5\textwidth}
+
+\textbf{Atmospheric Chemistry:}
+\begin{itemize}
+\item Ozone formation/depletion
+\item Radical reactions
+\item Aerosol chemistry
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Combustion:}
+\begin{itemize}
+\item Flame chemistry
+\item Explosions
+\item Engine efficiency
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Materials Science:}
+\begin{itemize}
+\item Surface reactions
+\item Catalysis
+\item Corrosion
+\end{itemize}
+
+\column{0.5\textwidth}
+
+\textbf{Biochemistry:}
+\begin{itemize}
+\item Enzyme mechanisms
+\item Electron transport chains
+\item Photosynthesis
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Energy Conversion:}
+\begin{itemize}
+\item Solar cells
+\item Batteries
+\item Fuel cells
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Pharmaceuticals:}
+\begin{itemize}
+\item Drug design
+\item Reaction optimization
+\item Metabolic pathways
+\end{itemize}
+
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{Further Resources}
+
+\textbf{Recommended Reading:}
+
+\begin{itemize}
+\item Atkins \& de Paula: \textit{Physical Chemistry}, Chapter 18
+\item Steinfeld, Francisco \& Hase: \textit{Chemical Kinetics and Dynamics}
+\item Levine: \textit{Molecular Reaction Dynamics}
+\item Marcus: Nobel Lecture (1992) on electron transfer
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Interactive Resources:}
+
+\begin{itemize}
+\item Jupyter notebooks for each topic (see QR codes throughout)
+\item PhET simulations: Collision theory, reaction dynamics
+\item Computational chemistry software: Gaussian, ORCA, Q-Chem
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Advanced Topics:}
+
+\begin{itemize}
+\item Femtochemistry (Nobel Prize 1999 - Ahmed Zewail)
+\item Attosecond science
+\item Machine learning potentials
+\item Quantum control of reactions
+\end{itemize}
+
+\end{frame}
+
+% ============================================================================
+% FINAL SLIDE
+% ============================================================================
+\begin{frame}[plain]
+
+\begin{center}
+{\Huge Questions?}
+
+\vspace{1cm}
+
+{\Large Thank you for your attention!}
+
+\vspace{1cm}
+
+\textit{From simple collisions to complex electron transfer,\\
+reaction dynamics reveals the beauty of chemistry at the molecular level}
+
+\end{center}
+
+\end{frame}
+
+\end{document}

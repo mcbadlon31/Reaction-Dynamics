@@ -1,0 +1,11 @@
+reaction,donor,acceptor,ionization_energy_eV,electron_affinity_eV,sum_radii_pm,experimental_cross_section_nm2,reference
+K+Br2,K,Br2,4.34,2.55,400,1.15,Herschbach_1966
+K+Cl2,K,Cl2,4.34,2.38,380,0.98,Herschbach_1966
+K+I2,K,I2,4.34,2.52,450,1.42,Herschbach_1966
+Na+Br2,Na,Br2,5.14,2.55,350,0.52,Lee_1974
+Na+Cl2,Na,Cl2,5.14,2.38,330,0.43,Lee_1974
+Na+I2,Na,I2,5.14,2.52,400,0.68,Lee_1974
+Rb+Br2,Rb,Br2,4.18,2.55,420,1.28,Polanyi_1975
+Rb+Cl2,Rb,Cl2,4.18,2.38,400,1.09,Polanyi_1975
+Cs+Br2,Cs,Br2,3.89,2.55,450,1.56,Polanyi_1975
+Li+Br2,Li,Br2,5.39,2.55,300,0.31,Bernstein_1968

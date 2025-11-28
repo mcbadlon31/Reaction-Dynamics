@@ -1,0 +1,12 @@
+solvent,viscosity_cP,cage_lifetime_ps,escape_probability,average_collisions_per_cage
+hexane,0.300,12,0.85,15
+acetone,0.306,13,0.84,16
+diethyl_ether,0.224,9,0.88,12
+acetonitrile,0.341,15,0.82,18
+dichloromethane,0.413,18,0.80,22
+methanol,0.544,23,0.77,28
+toluene,0.560,24,0.76,29
+ethanol,1.074,42,0.68,52
+DMF,0.802,35,0.72,43
+DMSO,1.996,85,0.58,105
+water,0.890,38,0.70,47

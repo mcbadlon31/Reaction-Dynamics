@@ -1,0 +1,22 @@
+reaction,vibrational_state,population_fraction
+F + H2,0,0.03
+F + H2,1,0.08
+F + H2,2,0.18
+F + H2,3,0.28
+F + H2,4,0.22
+F + H2,5,0.15
+F + H2,6,0.06
+F + D2,0,0.04
+F + D2,1,0.10
+F + D2,2,0.19
+F + D2,3,0.25
+F + D2,4,0.20
+F + D2,5,0.14
+F + D2,6,0.08
+Cl + HBr,0,0.52
+Cl + HBr,1,0.28
+Cl + HBr,2,0.12
+Cl + HBr,3,0.05
+Cl + HBr,4,0.02
+Cl + HBr,5,0.01
+Cl + HBr,6,0.00

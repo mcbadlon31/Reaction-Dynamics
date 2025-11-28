@@ -1,0 +1,53 @@
+# LaTeX artifacts
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.tdo
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.pytest_cache/
+*.egg-info/
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Build directories
+build/
+dist/
+
+# Temporary files
+*.tmp
+*.temp
+*_tmp*
+
+# Backup files
+*.bak
+*_backup*
+*~
+
+# Large data files (optional)
+# *.csv
+# *.h5
+
+# Sensitive information
+.env
+credentials.json

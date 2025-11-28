@@ -1,0 +1,14 @@
+# Python dependencies for Reaction Dynamics Interactive Notebooks
+# Install with: pip install -r requirements.txt
+
+numpy>=1.21.0
+matplotlib>=3.5.0
+scipy>=1.7.0
+pandas>=1.3.0
+seaborn>=0.11.0
+plotly>=5.0.0
+ipywidgets>=7.6.0
+jupyter>=1.0.0
+jupyterlab>=3.0.0
+qrcode[pil]>=7.3.1
+Pillow>=9.0.0

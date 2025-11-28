@@ -1,0 +1,163 @@
+% ============================================================================
+% CUSTOM COMMANDS FOR REACTION DYNAMICS PRESENTATION
+% ============================================================================
+
+% ============================================================================
+% MATHEMATICAL COMMANDS
+% ============================================================================
+
+% Differential operators
+\newcommand{\diff}[1]{\mathrm{d}#1}
+\newcommand{\partd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\ddt}[1]{\frac{\diff #1}{\diff t}}
+
+% ============================================================================
+% CHEMICAL AND PHYSICAL CONSTANTS
+% ============================================================================
+
+% Boltzmann constant
+\newcommand{\kB}{k_{\text{B}}}
+
+% Avogadro's number
+\newcommand{\NA}{N_{\text{A}}}
+
+% Activation energy
+\newcommand{\Ea}{E_{\text{a}}}
+
+% Rate constants
+\newcommand{\kr}{k_{\text{r}}}
+\newcommand{\kd}{k_{\text{d}}}
+
+% Quantum mechanics
+\newcommand{\ket}[1]{|#1\rangle}
+
+% ============================================================================
+% THERMODYNAMIC QUANTITIES
+% ============================================================================
+
+% Gibbs energy
+\newcommand{\Gibbs}{\Delta G}
+
+% Activation parameters
+\newcommand{\Hact}{\Delta^{\ddagger} H^{\circ}}
+\newcommand{\Gact}{\Delta^{\ddagger} G^{\circ}}
+\newcommand{\Sact}{\Delta^{\ddagger} S^{\circ}}
+
+% ============================================================================
+% SPECIAL FORMATTING
+% ============================================================================
+
+% X mark symbol for limitations/negatives
+\newcommand{\xmark}{\textcolor{darkred}{\textbf{$\times$}}}
+
+% Key equation box (highlighted equation)
+\newcommand{\keyeq}[1]{%
+\begin{center}
+\fcolorbox{darkblue}{lightblue!20}{%
+\begin{minipage}{0.85\textwidth}
+\begin{equation*}
+\boxed{#1}
+\end{equation*}
+\end{minipage}
+}%
+\end{center}
+}
+
+% Notebook reference with QR code
+\newcommand{\notebook}[2]{%
+\begin{center}
+\begin{tikzpicture}
+\node[rectangle,draw,fill=yellow!10,text width=0.7\textwidth,align=center,minimum height=1.5cm] (text) {%
+\textbf{Interactive Notebook:} #1\\[0.2cm]
+\small Scan QR code or visit: \url{#2}
+};
+\node[right=0.5cm of text] (qr) {\qrcode[height=1.2cm]{#2}};
+\end{tikzpicture}
+\end{center}
+}
+
+% Concept highlight box
+\newcommand{\concept}[2]{%
+\begin{block}{#1}
+#2
+\end{block}
+}
+
+% Emphasis box (for important points)
+\newcommand{\emphbox}[1]{%
+\begin{center}
+\fcolorbox{darkorange}{darkorange!10}{%
+\begin{minipage}{0.9\textwidth}
+\centering
+\textbf{#1}
+\end{minipage}
+}%
+\end{center}
+}
+
+% ============================================================================
+% ARROW STYLES FOR REACTION MECHANISMS
+% ============================================================================
+
+% Equilibrium arrow
+\newcommand{\eqarrow}{\rightleftharpoons}
+
+% Forward reaction arrow
+\newcommand{\forward}{\longrightarrow}
+
+% Reverse reaction arrow
+\newcommand{\reverse}{\longleftarrow}
+
+% ============================================================================
+% UNITS (supplement siunitx if needed)
+% ============================================================================
+
+% Common unit combinations
+\DeclareSIUnit\angstrom{\text{\AA}}
+\DeclareSIUnit\debye{D}
+\DeclareSIUnit\calorie{cal}
+
+% ============================================================================
+% COLOR DEFINITIONS FOR CONSISTENCY
+% ============================================================================
+
+% Already defined in main file, but repeated here for reference:
+% \definecolor{darkblue}{RGB}{0,51,102}
+% \definecolor{lightblue}{RGB}{102,178,255}
+% \definecolor{darkred}{RGB}{153,0,0}
+% \definecolor{darkorange}{RGB}{204,102,0}
+% \definecolor{darkgreen}{RGB}{0,102,51}
+
+% ============================================================================
+% TIKZ STYLES FOR DIAGRAMS
+% ============================================================================
+
+\tikzset{
+    % Molecule style
+    molecule/.style={circle,draw,fill=blue!30,minimum size=0.8cm},
+    % Transition state style
+    transition/.style={circle,draw,fill=red!30,minimum size=0.8cm},
+    % Product style
+    product/.style={circle,draw,fill=green!30,minimum size=0.8cm},
+    % Energy level
+    level/.style={thick,blue},
+    % Reaction arrow
+    rxnarrow/.style={-{Stealth[length=3mm]},very thick,red}
+}
+
+% ============================================================================
+% PGFPLOTS STYLES FOR CONSISTENT GRAPHS
+% ============================================================================
+
+\pgfplotsset{
+    standard plot/.style={
+        width=8cm,
+        height=6cm,
+        grid=major,
+        thick,
+        xlabel style={font=\small},
+        ylabel style={font=\small},
+        legend style={font=\footnotesize},
+        tick label style={font=\footnotesize}
+    }
+}

@@ -1,0 +1,4 @@
+reaction,barrier_type,barrier_height_kJ_mol,exothermicity_kJ_mol,predicted_vib_fraction
+F + H2,early,8.5,133,0.62
+F + D2,early,8.5,133,0.58
+Cl + HBr,late,18.5,68,0.22

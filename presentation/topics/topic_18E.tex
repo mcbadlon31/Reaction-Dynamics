@@ -1,0 +1,884 @@
+% ============================================================================
+% TOPIC 18E: ELECTRON TRANSFER
+% ============================================================================
+
+\section{Topic 18E: Electron Transfer}
+
+% ===========================================================================
+% Slide: Topic 18E Overview
+% ===========================================================================
+\begin{frame}{Topic 18E: Overview}
+
+\textbf{Electron Transfer (ET) Reactions}
+
+\[ \ch{D + A -> D^+ + A^-} \]
+
+\vspace{0.3cm}
+\begin{itemize}
+    \item \textbf{Simplest} class of reactions: just electron movement
+    \item No bonds broken or formed in elementary step
+    \item Ubiquitous in chemistry, biology, materials science
+    \item \textbf{Marcus Theory:} Rudolph Marcus, Nobel Prize 1992
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Examples:}
+\begin{itemize}
+    \item \textbf{Biology:} Photosynthesis, respiration (cytochrome chains)
+    \item \textbf{Chemistry:} Redox reactions, fuel cells, batteries
+    \item \textbf{Materials:} Organic electronics, solar cells
+\end{itemize}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Types of Electron Transfer - Part 1
+% ===========================================================================
+\begin{frame}{Types of Electron Transfer Reactions (Part 1)}
+
+\textbf{1. Self-Exchange Reactions:}
+\[ \ch{Fe^{2+} + Fe^{3+} -> Fe^{3+} + Fe^{2+}} \]
+\begin{itemize}
+    \item $\Delta_r G^\circ = 0$ (no driving force)
+    \item Rate depends only on reorganization energy
+    \item Used to measure intrinsic barrier
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{2. Cross Reactions:}
+\[ \ch{D + A -> D^+ + A^-} \]
+\begin{itemize}
+    \item $\Delta_r G^\circ \neq 0$
+    \item Thermodynamically driven
+    \item Rate depends on driving force AND reorganization
+\end{itemize}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Types of Electron Transfer - Part 2
+% ===========================================================================
+\begin{frame}{Types of Electron Transfer Reactions (Part 2)}
+
+\textbf{3. Inner vs. Outer Sphere:}
+\begin{itemize}
+    \item \textbf{Outer Sphere:} Electron tunnels, no ligand exchange
+    \item \textbf{Inner Sphere:} Bridge ligand shared, chemical bond formation
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{Comparison:}
+\begin{itemize}
+    \item Outer sphere: Simple, predictable by Marcus theory
+    \item Inner sphere: More complex, involves bond making/breaking
+    \item Most biological ET is outer sphere
+    \item Transition metal chemistry has both types
+\end{itemize}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Thermodynamics of ET
+% ===========================================================================
+\begin{frame}{Thermodynamics of Electron Transfer}
+
+\textbf{Driving Force:} Determined by reduction potentials
+
+For: \ch{D + A -> D^+ + A^-}
+
+\keyeq{\Delta_r G^\circ = -F(E_{\text{D}^+/\text{D}} - E_{\text{A}/\text{A}^-})}
+
+where $F$ is Faraday constant (96485 C/mol).
+
+\vspace{0.3cm}
+\textbf{Example:}
+\begin{itemize}
+    \item \ch{Ru(bpy)_3^{2+}} (D): $E^\circ = -1.3$ V vs. NHE
+    \item \ch{MV^{2+}} (A): $E^\circ = -0.45$ V vs. NHE
+    \item $\Delta_r G^\circ = -F(-1.3 - (-0.45)) = -F(-0.85) = +82$ kJ/mol
+\end{itemize}
+
+Positive $\Delta_r G^\circ$ → endergonic, need excitation.
+
+\end{frame}
+
+% ===========================================================================
+% Slide: The Franck-Condon Principle
+% ===========================================================================
+\begin{frame}{The Franck-Condon Principle}
+
+\textbf{Key Concept:} Electrons move \alert{much faster} than nuclei.
+
+\begin{itemize}
+    \item Electron transfer time: $\sim 10^{-15}$ s (femtoseconds)
+    \item Nuclear motion time: $\sim 10^{-13}$ s (100 fs)
+\end{itemize}
+
+\vspace{0.3cm}
+\emphbox{
+\textbf{Franck-Condon Principle:} Electron transfer occurs at \alert{fixed nuclear geometry} - a "vertical" transition on energy diagram.
+}
+
+\vspace{0.3cm}
+\textbf{Consequences:}
+\begin{itemize}
+    \item Energy must be conserved at the instant of transfer
+    \item Reactant and product energy surfaces must intersect
+    \item Nuclei must reorganize \textit{before} electron jumps
+    \item Reorganization creates activation barrier
+\end{itemize}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Potential Energy Surfaces
+% ===========================================================================
+\begin{frame}{Potential Energy Surfaces for ET}
+
+\centering
+\includegraphics[width=0.8\textwidth]{Reaction_Dynamics_Interactive/images/marcus_parabolas_annotated.png}
+
+\vspace{0.2cm}
+\textbf{Reorganization energy $\lambda$:} Vertical distance from product minimum to reactant curve.
+
+\vspace{0.1cm}
+\tiny \textit{Interactive Marcus theory explorer available in notebook}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Reorganization Energy Components
+% ===========================================================================
+\begin{frame}{Reorganization Energy ($\lambda$)}
+
+\textbf{Total reorganization energy:}
+\keyeq{\lambda = \lambda_{\text{in}} + \lambda_{\text{out}}}
+
+\vspace{0.3cm}
+\textbf{1. Inner Sphere ($\lambda_{\text{in}}$):}
+\begin{itemize}
+    \item Changes in bond lengths and angles of D and A
+    \item Example: Fe$^{2+}$ has longer bonds than Fe$^{3+}$
+    \item Typical: 0.2-1.0 eV for transition metal complexes
+    \item Small for organic molecules with delocalized $\pi$ systems
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{2. Outer Sphere ($\lambda_{\text{out}}$):}
+\begin{itemize}
+    \item Reorientation of solvent molecules
+    \item Ions polarize solvent differently
+    \item Depends on: solvent dielectric constant, ion size
+    \item Typical: 0.5-1.5 eV in polar solvents
+\end{itemize}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Calculating Outer Sphere λ
+% ===========================================================================
+\begin{frame}{Marcus Formula for $\lambda_{\text{out}}$}
+
+\textbf{Dielectric Continuum Model:}
+
+\keyeq{\lambda_{\text{out}} = \frac{e^2}{4\pi\varepsilon_0}\left(\frac{1}{2r_D} + \frac{1}{2r_A} - \frac{1}{d}\right)\left(\frac{1}{\varepsilon_{\text{op}}} - \frac{1}{\varepsilon_s}\right)}
+
+\begin{itemize}
+    \item $r_D$, $r_A$: radii of donor and acceptor
+    \item $d$: distance between donor and acceptor
+    \item $\varepsilon_{\text{op}}$: optical dielectric constant = $n^2$
+    \item $\varepsilon_s$: static dielectric constant
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Physical Meaning:}
+\begin{itemize}
+    \item Electronic polarization (fast) follows electron instantly: $\varepsilon_{\text{op}}$
+    \item Nuclear/orientational polarization (slow) lags behind: $\varepsilon_s$
+    \item Difference creates reorganization barrier
+\end{itemize}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Deriving Marcus Equation - Step 1
+% ===========================================================================
+\begin{frame}{Deriving Marcus Equation - Step 1}
+
+\textbf{Harmonic Approximation:} Model surfaces as parabolas
+
+Reactant: $G_R(q) = \frac{1}{2}k(q-q_R)^2$
+
+Product: $G_P(q) = \frac{1}{2}k(q-q_P)^2 + \Delta_r G^\circ$
+
+\vspace{0.3cm}
+\textbf{Assumptions:}
+\begin{itemize}
+    \item Same force constant $k$ for both surfaces
+    \item Shift in equilibrium position: $\Delta q = q_P - q_R$
+    \item Reorganization energy: $\lambda = \frac{1}{2}k(\Delta q)^2$
+\end{itemize}
+
+\vspace{0.3cm}
+Find intersection point (TS) where $G_R(q^\ddagger) = G_P(q^\ddagger)$.
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Deriving Marcus Equation - Step 2
+% ===========================================================================
+\begin{frame}{Deriving Marcus Equation - Step 2}
+
+\textbf{At intersection:}
+\[ \frac{1}{2}k(q^\ddagger - q_R)^2 = \frac{1}{2}k(q^\ddagger - q_P)^2 + \Delta_r G^\circ \]
+
+Solve for $q^\ddagger$:
+\[ q^\ddagger = q_R + \frac{\Delta q}{2} + \frac{\Delta_r G^\circ}{k \Delta q} \]
+
+Activation energy:
+\[ \Delta G^\ddagger = G_R(q^\ddagger) - G_R(q_R) = \frac{1}{2}k(q^\ddagger - q_R)^2 \]
+
+Substitute and simplify using $\lambda = \frac{1}{2}k(\Delta q)^2$:
+
+\keyeq{\Delta G^\ddagger = \frac{(\Delta_r G^\circ + \lambda)^2}{4\lambda}}
+
+This is the \textbf{Marcus Equation} for activation energy!
+
+\end{frame}
+
+% ===========================================================================
+% Slide: The Marcus Equation
+% ===========================================================================
+\begin{frame}{The Marcus Equation}
+
+\textbf{Rate constant for electron transfer:}
+
+\keyeq{k_{ET} = \kappa \nu_n \exp\left(-\frac{\Delta G^\ddagger}{RT}\right)}
+
+where $\nu_n$ is nuclear frequency factor ($\sim 10^{13}$ s$^{-1}$).
+
+Substituting Marcus activation energy:
+
+\keyeq{k_{ET} = \kappa \nu_n \exp\left(-\frac{(\Delta_r G^\circ + \lambda)^2}{4\lambda RT}\right)}
+
+\vspace{0.3cm}
+\textbf{Key Parameters:}
+\begin{itemize}
+    \item $\Delta_r G^\circ$: Driving force (thermodynamics)
+    \item $\lambda$: Reorganization energy (barrier height)
+    \item $\kappa$: Electronic transmission coefficient (tunneling)
+\end{itemize}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Three Regimes - Part 1
+% ===========================================================================
+\begin{frame}{Three Regimes of ET (Part 1)}
+
+\textbf{Analyze $\Delta G^\ddagger = \frac{(\Delta_r G^\circ + \lambda)^2}{4\lambda}$:}
+
+\vspace{0.5cm}
+\textbf{1. Normal Region ($-\Delta_r G^\circ < \lambda$):}
+\[ \Delta G^\ddagger = \frac{\lambda}{4}\left(1 + \frac{\Delta_r G^\circ}{\lambda}\right)^2 \]
+\begin{itemize}
+    \item Barrier decreases as reaction becomes more exergonic
+    \item Rate increases with driving force (normal behavior)
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{2. Barrierless ($-\Delta_r G^\circ = \lambda$):}
+\[ \Delta G^\ddagger = 0 \]
+\begin{itemize}
+    \item \alert{Maximum rate}: surfaces intersect at reactant minimum
+    \item Diffusion-controlled limit
+\end{itemize}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Three Regimes - Part 2
+% ===========================================================================
+\begin{frame}{Three Regimes of ET (Part 2)}
+
+\textbf{3. Inverted Region ($-\Delta_r G^\circ > \lambda$):}
+\begin{itemize}
+    \item Barrier \textit{increases} as reaction becomes more exergonic
+    \item Rate \textit{decreases} with driving force (counter-intuitive!)
+\end{itemize}
+
+\vspace{0.5cm}
+\emphbox{
+Marcus' most famous prediction: Making a reaction more exergonic can slow it down!
+}
+
+\vspace{0.5cm}
+\textbf{Summary:}
+\begin{itemize}
+    \item Normal: Faster with more driving force
+    \item Barrierless: Maximum at $-\Delta_r G^\circ = \lambda$
+    \item Inverted: Slower with more driving force
+\end{itemize}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Marcus Parabola
+% ===========================================================================
+\begin{frame}{Marcus Parabola: Rate vs. Driving Force}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    \begin{axis}[
+        xlabel={$-\Delta_r G^\circ$ (eV)},
+        ylabel={$\ln k_{ET}$},
+        xmin=0, xmax=3,
+        ymin=-2, ymax=2,
+        axis lines=left,
+        width=10cm,
+        height=7cm,
+        xtick={1.5}, xticklabels={$\lambda$}
+    ]
+    % Marcus parabola: ln k ∝ -(ΔᵣG° + λ)²/(4λ) with λ = 1.5 eV
+    % Correct curvature: divide by 4λ = 6, not 1.5
+    \addplot[blue, ultra thick, domain=0:3, samples=100] {2 - (x-1.5)^2/6};
+
+    % Annotations
+    \node at (axis cs:0.5,0.5) {\footnotesize Normal};
+    \node at (axis cs:1.5,2.3) {\footnotesize Barrierless};
+    \node at (axis cs:2.5,0.5) {\footnotesize Inverted};
+
+    % Vertical line at maximum
+    \draw[dashed] (axis cs:1.5,-2) -- (axis cs:1.5,2);
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+
+\textbf{Key Prediction:} After reaching maximum at $-\Delta_r G^\circ = \lambda$, rate decreases!
+
+\end{frame}
+
+% ===========================================================================
+% Slide: The Inverted Region
+% ===========================================================================
+\begin{frame}{The Inverted Region - Explanation}
+
+\textbf{Why does rate decrease with more driving force?}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.7]
+    \begin{axis}[
+        xlabel={Nuclear Coordinate},
+        ylabel={Free Energy},
+        xtick=\empty, ytick=\empty,
+        axis lines=left,
+        width=10cm,
+        height=6cm,
+        ymin=-3, ymax=4
+    ]
+    % Reactant
+    \addplot[blue, thick, domain=-0.5:3.5] {(x-1)^2};
+    \node[blue] at (axis cs:0.5,3.5) {R};
+
+    % Product (normal)
+    \addplot[red, thick, domain=0.5:4.5] {(x-3)^2 - 0.5};
+    \node[red] at (axis cs:3.5,3.5) {P (normal)};
+
+    % Product (inverted)
+    \addplot[darkgreen, thick, domain=0.5:4.5] {(x-3)^2 - 2.5};
+    \node[darkgreen] at (axis cs:4,0.5) {P (inverted)};
+
+    % Intersection points
+    \fill[red] (axis cs:2,1) circle (0.08cm) node[above] {\tiny Low $\Delta G^\ddagger$};
+    \fill[darkgreen] (axis cs:1.3,2) circle (0.08cm) node[above] {\tiny High $\Delta G^\ddagger$};
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+
+In inverted region: Surfaces intersect at \alert{high energy} because product well is too far down.
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Experimental Evidence - Part 1
+% ===========================================================================
+\begin{frame}{Experimental Evidence for Inverted Region (Part 1)}
+
+\textbf{Challenge:} Hard to observe - requires large $|\Delta_r G^\circ|$ while keeping $\lambda$ small.
+
+\vspace{0.5cm}
+\textbf{Early Evidence (Closs \& Miller, 1984):}
+\begin{itemize}
+    \item Intramolecular ET in rigid molecules
+    \item Donor-Bridge-Acceptor systems
+    \item Fixed distance, variable driving force
+    \item Observed rate maximum and subsequent decrease
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{Breakthrough:} First direct confirmation of Marcus inverted region
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Experimental Evidence - Part 2
+% ===========================================================================
+\begin{frame}{Experimental Evidence for Inverted Region (Part 2)}
+
+\textbf{Modern Examples:}
+\begin{itemize}
+    \item Photoinduced back-electron transfer in donor-acceptor dyads
+    \item Observed in porphyrin-quinone systems
+    \item Common in photosynthetic reaction centers
+    \item Used to slow down unproductive back-reactions
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{Biological Significance:}
+\begin{itemize}
+    \item Nature uses inverted region to prevent energy-wasting back-transfer
+    \item Essential for efficient energy conversion
+    \item Protects high-energy charge-separated states
+\end{itemize}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Distance Dependence
+% ===========================================================================
+\begin{frame}{Distance Dependence of ET}
+
+\textbf{Electronic Coupling:} Electron must \alert{tunnel} between D and A.
+
+\keyeq{H_{DA} \propto \exp(-\beta r/2)}
+
+where:
+\begin{itemize}
+    \item $H_{DA}$: Electronic coupling matrix element
+    \item $r$: edge-to-edge distance
+    \item $\beta$: decay parameter (depends on medium)
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Rate Dependence:}
+\keyeq{k_{ET} \propto H_{DA}^2 \propto \exp(-\beta r)}
+
+\vspace{0.3cm}
+\textbf{Typical $\beta$ values:}
+\begin{itemize}
+    \item Vacuum/protein: $\beta \approx 16$-$20$ nm$^{-1}$ (fast decay)
+    \item Through $\pi$-conjugated bridge: $\beta \approx 2$-$5$ nm$^{-1}$ (slow decay)
+    \item Through $\sigma$ bonds: $\beta \approx 8$-$12$ nm$^{-1}$
+\end{itemize}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Semiclassical Marcus-Hush Theory - Part 1
+% ===========================================================================
+\begin{frame}{Semiclassical Marcus-Hush Theory (Part 1)}
+
+\textbf{Full Expression:}
+
+\keyeq{k_{ET} = \frac{2\pi}{\hbar}H_{DA}^2 \frac{1}{\sqrt{4\pi\lambda k_B T}} \exp\left(-\frac{(\Delta_r G^\circ + \lambda)^2}{4\lambda k_B T}\right)}
+
+\vspace{0.5cm}
+\textbf{This combines:}
+\begin{itemize}
+    \item Quantum mechanics (electron tunneling)
+    \item Classical mechanics (nuclear reorganization)
+    \item Statistical mechanics (thermal activation)
+\end{itemize}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Semiclassical Marcus-Hush Theory - Part 2
+% ===========================================================================
+\begin{frame}{Semiclassical Marcus-Hush Theory (Part 2)}
+
+\textbf{Three Factors:}
+
+\begin{enumerate}
+    \item \textbf{Electronic Factor:} $H_{DA}^2$
+        \begin{itemize}
+            \item Tunneling probability
+            \item Decreases exponentially with distance
+        \end{itemize}
+
+    \item \textbf{Nuclear Factor:} $\frac{1}{\sqrt{4\pi\lambda k_B T}}$
+        \begin{itemize}
+            \item Franck-Condon weighted density of states
+            \item Pre-exponential factor
+        \end{itemize}
+
+    \item \textbf{Activation Factor:} $\exp\left(-\frac{(\Delta_r G^\circ + \lambda)^2}{4\lambda k_B T}\right)$
+        \begin{itemize}
+            \item Marcus activation energy
+            \item Temperature dependent
+        \end{itemize}
+\end{enumerate}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Marcus Cross Relation
+% ===========================================================================
+\begin{frame}{Marcus Cross Relation}
+
+\textbf{Goal:} Predict rate of cross reaction from self-exchange rates.
+
+For: \ch{D_1 + A_2 -> D_1^+ + A_2^-}
+
+\keyeq{k_{12} = \sqrt{k_{11} k_{22} K_{12} f_{12}}}
+
+where:
+\begin{itemize}
+    \item $k_{11}$: self-exchange rate of D$_1$/D$_1^+$
+    \item $k_{22}$: self-exchange rate of A$_2$/A$_2^-$
+    \item $K_{12}$: equilibrium constant = $\exp(-\Delta_r G^\circ / RT)$
+    \item $f_{12}$: correction factor (usually $\approx 1$ for small $\Delta_r G^\circ$)
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Utility:}
+\begin{itemize}
+    \item Self-exchange rates are easier to measure
+    \item Predict rates for many cross reactions
+    \item Test consistency of Marcus theory
+\end{itemize}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Biological Electron Transfer - Part 1
+% ===========================================================================
+\begin{frame}{Biological Electron Transfer (Part 1)}
+
+\textbf{Electron Transport Chains:}
+
+\begin{itemize}
+    \item \textbf{Photosynthesis:} P680 → Pheophytin → Q$_A$ → Q$_B$
+    \item \textbf{Respiration:} NADH → Complex I → Q → Complex III → Cyt c → Complex IV → O$_2$
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{Design Principles:}
+
+\begin{enumerate}
+    \item \textbf{Forward ET in Normal Region:}
+        \begin{itemize}
+            \item $-\Delta_r G^\circ < \lambda$ → fast forward transfer
+        \end{itemize}
+
+    \item \textbf{Back ET in Inverted Region:}
+        \begin{itemize}
+            \item $-\Delta_r G^\circ > \lambda$ → slow wasteful back-transfer
+            \item Prevents energy loss
+        \end{itemize}
+\end{enumerate}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Biological Electron Transfer - Part 2
+% ===========================================================================
+\begin{frame}{Biological Electron Transfer (Part 2)}
+
+\textbf{Design Principles (continued):}
+
+\begin{enumerate}
+    \setcounter{enumi}{2}
+    \item \textbf{Optimal Distances:}
+        \begin{itemize}
+            \item Typically 10-15 Å edge-to-edge
+            \item Fast enough but selective
+            \item Prevents short-circuits
+        \end{itemize}
+
+    \item \textbf{Protein Bridges:}
+        \begin{itemize}
+            \item Lower $\beta$ through aromatic residues
+            \item Facilitate long-range transfer
+            \item Guide electron path
+        \end{itemize}
+\end{enumerate}
+
+\vspace{0.5cm}
+\textbf{Result:} Efficient directional ET with minimal energy loss!
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Worked Example 1
+% ===========================================================================
+\begin{frame}{Worked Example 1: Calculating λ$_{\text{out}}$}
+
+\textbf{Problem:} Calculate $\lambda_{\text{out}}$ for ET between two spherical ions with $r_D = r_A = 0.3$ nm separated by $d = 0.8$ nm in water ($\varepsilon_s = 80$, $n = 1.33$).
+
+\vspace{0.3cm}
+\textbf{Solution:}
+
+\[ \lambda_{\text{out}} = \frac{e^2}{4\pi\varepsilon_0}\left(\frac{1}{2r_D} + \frac{1}{2r_A} - \frac{1}{d}\right)\left(\frac{1}{n^2} - \frac{1}{\varepsilon_s}\right) \]
+
+Constants: $\frac{e^2}{4\pi\varepsilon_0} = 1.44$ eV·nm
+
+\[ \lambda_{\text{out}} = 1.44 \left(\frac{1}{2(0.3)} + \frac{1}{2(0.3)} - \frac{1}{0.8}\right)\left(\frac{1}{1.77} - \frac{1}{80}\right) \]
+
+\[ = 1.44(1.67 + 1.67 - 1.25)(0.565 - 0.0125) \]
+
+\[ = 1.44(2.09)(0.553) = 1.66 \text{ eV} \]
+
+\keyeq{\lambda_{\text{out}} = 1.66 \text{ eV} = 160 \text{ kJ/mol}}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Worked Example 2
+% ===========================================================================
+\begin{frame}{Worked Example 2: Marcus Activation Energy}
+
+\textbf{Problem:} For an ET reaction with $\lambda = 1.0$ eV and $\Delta_r G^\circ = -0.4$ eV, calculate:
+\begin{enumerate}[a)]
+    \item The activation energy $\Delta G^\ddagger$
+    \item The rate constant at 298 K (assume $\nu_n = 10^{13}$ s$^{-1}$, $\kappa = 1$)
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Solution:}
+
+(a) Marcus equation:
+\[ \Delta G^\ddagger = \frac{(\Delta_r G^\circ + \lambda)^2}{4\lambda} = \frac{(-0.4 + 1.0)^2}{4(1.0)} = \frac{(0.6)^2}{4} = 0.09 \text{ eV} \]
+
+(b) Rate constant:
+\[ k_{ET} = 10^{13} \exp\left(-\frac{0.09 \times 96.5}{8.314 \times 0.298}\right) = 10^{13} \exp(-3.50) \]
+\[ = 10^{13} \times 0.030 = 3.0 \times 10^{11} \text{ s}^{-1} \]
+
+\keyeq{k_{ET} = 3.0 \times 10^{11} \text{ s}^{-1}}
+
+\textbf{Note:} Very fast! In normal region ($-\Delta_r G^\circ < \lambda$).
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Worked Example 3
+% ===========================================================================
+\begin{frame}{Worked Example 3: Inverted Region}
+
+\textbf{Problem:} For the same system ($\lambda = 1.0$ eV), calculate $\Delta G^\ddagger$ for:
+\begin{enumerate}[a)]
+    \item $\Delta_r G^\circ = -1.0$ eV (barrierless)
+    \item $\Delta_r G^\circ = -2.0$ eV (inverted)
+\end{enumerate}
+
+Compare with normal region ($\Delta_r G^\circ = -0.4$ eV, $\Delta G^\ddagger = 0.09$ eV).
+
+\vspace{0.3cm}
+\textbf{Solution:}
+
+(a) Barrierless:
+\[ \Delta G^\ddagger = \frac{(-1.0 + 1.0)^2}{4(1.0)} = 0 \text{ eV} \]
+
+(b) Inverted:
+\[ \Delta G^\ddagger = \frac{(-2.0 + 1.0)^2}{4(1.0)} = \frac{1.0}{4} = 0.25 \text{ eV} \]
+
+\textbf{Trend:} $\Delta G^\ddagger = 0.09 \to 0 \to 0.25$ eV
+
+Rate \alert{increases} then \alert{decreases} as $-\Delta_r G^\circ$ increases!
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Practice Problem 1
+% ===========================================================================
+\begin{frame}{Practice Problem 1}
+
+\textbf{Problem:} An ET reaction has the following parameters:
+\begin{itemize}
+    \item $\lambda = 0.8$ eV
+    \item $\Delta_r G^\circ = -0.6$ eV
+    \item Distance: $r = 1.0$ nm
+    \item $\beta = 10$ nm$^{-1}$
+\end{itemize}
+
+\begin{enumerate}[a)]
+    \item Calculate $\Delta G^\ddagger$
+    \item Is this in normal, barrierless, or inverted region?
+    \item If distance increases to 1.5 nm, by what factor does rate decrease?
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Answers:}
+\begin{itemize}
+    \item[(a)] $\Delta G^\ddagger = 0.01$ eV
+    \item[(b)] Normal region ($-\Delta_r G^\circ < \lambda$)
+    \item[(c)] Rate decreases by factor $\exp(\beta \Delta r) = \exp(10 \times 0.5) \approx 150$
+\end{itemize}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Practice Problem 2
+% ===========================================================================
+\begin{frame}{Practice Problem 2}
+
+\textbf{Problem:} The self-exchange rate constants are:
+\begin{itemize}
+    \item \ch{Fe^{2+}/Fe^{3+}}: $k_{11} = 4.0$ M$^{-1}$s$^{-1}$
+    \item \ch{Ru^{2+}/Ru^{3+}}: $k_{22} = 4.0 \times 10^2$ M$^{-1}$s$^{-1}$
+\end{itemize}
+
+For cross reaction \ch{Fe^{2+} + Ru^{3+} -> Fe^{3+} + Ru^{2+}}:
+\begin{itemize}
+    \item $\Delta_r G^\circ = -15$ kJ/mol
+    \item $K_{12} = \exp(15000/(8.314 \times 298)) = 403$
+\end{itemize}
+
+Estimate $k_{12}$ using Marcus cross relation ($f_{12} \approx 1$).
+
+\vspace{0.3cm}
+\textbf{Solution:}
+\[ k_{12} = \sqrt{k_{11} k_{22} K_{12}} = \sqrt{4.0 \times 400 \times 403} = \sqrt{6.4 \times 10^5} \]
+
+\keyeq{k_{12} \approx 800 \text{ M}^{-1}\text{s}^{-1}}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Practice Problem 3
+% ===========================================================================
+\begin{frame}{Practice Problem 3}
+
+\textbf{Problem:} A biological ET chain has three steps:
+
+\begin{center}
+\begin{tabular}{ccc}
+Step & $\Delta_r G^\circ$ (eV) & $\lambda$ (eV) \\
+\hline
+$1 \to 2$ & $-0.3$ & $0.8$ \\
+$2 \to 3$ & $-0.5$ & $0.8$ \\
+$3 \to 1$ (back) & $+0.8$ & $0.8$ \\
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[a)]
+    \item Calculate $\Delta G^\ddagger$ for each step
+    \item Which step is fastest?
+    \item Why is the back-reaction slow despite being exergonic overall?
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Answers:}
+\begin{itemize}
+    \item[(a)] $\Delta G^\ddagger(1\to2) = 0.078$ eV; $\Delta G^\ddagger(2\to3) = 0.028$ eV; $\Delta G^\ddagger(\text{back}) = 0.2$ eV
+    \item[(b)] Step $2 \to 3$ (lowest barrier)
+    \item[(c)] Back-reaction has endergonic $\Delta_r G^\circ$, creating large barrier
+\end{itemize}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Practice Problem 4
+% ===========================================================================
+\begin{frame}{Practice Problem 4}
+
+\textbf{Problem:} For optimal ET rate (barrierless), we need $-\Delta_r G^\circ = \lambda$.
+
+A photosynthetic reaction center has:
+\begin{itemize}
+    \item Forward ET: $\lambda = 0.5$ eV
+    \item Back ET: $\lambda = 0.5$ eV
+\end{itemize}
+
+\begin{enumerate}[a)]
+    \item What driving force gives fastest forward ET?
+    \item If actual $\Delta_r G^\circ = -0.3$ eV, what is $\Delta G^\ddagger$?
+    \item For back ET with $\Delta_r G^\circ = +0.3$ eV, what is the barrier?
+    \item How does this design prevent energy loss?
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Answers:}
+\begin{itemize}
+    \item[(a)] $\Delta_r G^\circ = -0.5$ eV (= $-\lambda$)
+    \item[(b)] $\Delta G^\ddagger = 0.02$ eV (fast)
+    \item[(c)] $\Delta G^\ddagger = 0.32$ eV (slow!)
+    \item[(d)] Endergonic back-reaction has huge barrier → prevents wasteful back-transfer
+\end{itemize}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Summary Topic 18E
+% ===========================================================================
+\begin{frame}{Summary: Topic 18E}
+
+\begin{enumerate}
+    \item \textbf{Franck-Condon Principle:} ET is vertical transition at fixed nuclear geometry
+    \[ \text{Time}_{\text{electron}} \ll \text{Time}_{\text{nuclear}} \]
+
+    \item \textbf{Reorganization Energy:} $\lambda = \lambda_{\text{in}} + \lambda_{\text{out}}$
+        \begin{itemize}
+            \item Cost to rearrange nuclei before ET
+        \end{itemize}
+
+    \item \textbf{Marcus Equation:}
+    \[ \Delta G^\ddagger = \frac{(\Delta_r G^\circ + \lambda)^2}{4\lambda} \]
+        \begin{itemize}
+            \item Normal region: rate increases with $-\Delta_r G^\circ$
+            \item Barrierless: $-\Delta_r G^\circ = \lambda$ (maximum rate)
+            \item Inverted region: rate decreases with $-\Delta_r G^\circ$
+        \end{itemize}
+
+    \item \textbf{Distance Dependence:} $k_{ET} \propto \exp(-\beta r)$
+        \begin{itemize}
+            \item Electron tunneling through barrier
+        \end{itemize}
+
+    \item \textbf{Biological Applications:} Optimized ET chains use normal + inverted regions
+\end{enumerate}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Interactive Resources for Topic 18E
+% ===========================================================================
+\begin{frame}{Interactive Learning: Topic 18E}
+
+\begin{columns}[c]
+\column{0.65\textwidth}
+\textbf{Explore Electron Transfer Theory Interactively!}
+
+\vspace{0.3cm}
+
+\textbf{Interactive Jupyter Notebook Features:}
+\begin{itemize}
+    \item \textbf{Marcus Parabola Explorer}: Visualize normal, barrierless, inverted
+    \item \textbf{Reorganization Energy Calculator}: Inner + outer sphere
+    \item \textbf{Driving Force vs Rate}: Interactive $k$ vs $-\Delta_r G^\circ$ plots
+    \item \textbf{Tunneling Distance Decay}: Exponential $\beta$ dependence
+    \item \textbf{Biological ET Chains}: Photosynthesis, respiration
+    \item \textbf{Real Systems}: Ru complexes, cytochrome c
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Notebook:} \texttt{05\_Electron\_Transfer.ipynb}
+
+\column{0.35\textwidth}
+\centering
+\textbf{Scan to Open:}
+
+\vspace{0.3cm}
+
+\includegraphics[width=0.8\textwidth]{QR_codes/05_Electron_Transfer.png}
+
+\vspace{0.3cm}
+
+{\footnotesize Or navigate to:\\
+\texttt{Reaction\_Dynamics\_Interactive/}}
+
+\end{columns}
+
+\end{frame}
+

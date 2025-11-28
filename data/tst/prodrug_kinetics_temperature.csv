@@ -1,0 +1,19 @@
+candidate,temperature_C,temperature_K,rate_constant_s_inv
+Candidate A,25,298.15,4.28e-04
+Candidate A,30,303.15,6.15e-04
+Candidate A,35,308.15,8.72e-04
+Candidate A,37,310.15,9.85e-04
+Candidate A,40,313.15,1.21e-03
+Candidate A,45,318.15,1.65e-03
+Candidate B,25,298.15,5.12e-05
+Candidate B,30,303.15,7.43e-05
+Candidate B,35,308.15,1.07e-04
+Candidate B,37,310.15,1.21e-04
+Candidate B,40,313.15,1.49e-04
+Candidate B,45,318.15,2.08e-04
+Candidate C,25,298.15,9.85e-06
+Candidate C,30,303.15,1.42e-05
+Candidate C,35,308.15,2.01e-05
+Candidate C,37,310.15,2.27e-05
+Candidate C,40,313.15,2.79e-05
+Candidate C,45,318.15,3.85e-05
