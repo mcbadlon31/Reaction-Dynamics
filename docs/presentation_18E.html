@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Topic 18E: Electron Transfer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive slides for Topic 18E: Electron Transfer">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css" id="theme">
+
+    <!-- Custom Glassmorphism Theme -->
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #60a5fa;
+            --accent-color: #8b5cf6;
+            --text-color: #f1f5f9;
+            --text-muted: #94a3b8;
+            --glass-bg: rgba(30, 41, 59, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        body {
+            background: radial-gradient(circle at 80% 80%, #0f172a 0%, #1e293b 100%);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .reveal {
+            color: var(--text-color);
+        }
+
+        .reveal h1,
+        .reveal h2,
+        .reveal h3,
+        .reveal h4 {
+            font-family: 'Merriweather', serif;
+            text-transform: none;
+            background: linear-gradient(to right, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .reveal p,
+        .reveal li {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* Glass Cards for Content */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--glass-shadow);
+            margin: 1rem 0;
+        }
+
+        .formula {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--glass-border);
+            margin: 20px 0;
+            font-family: 'Computer Modern', serif;
+        }
+
+        .highlight-box {
+            border-left: 4px solid var(--accent-color);
+            background: rgba(139, 92, 246, 0.1);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+            text-align: left;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Table Styling */
+        .reveal table {
+            font-size: 0.8em;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .reveal th {
+            border-bottom: 2px solid var(--secondary-color);
+            padding: 10px;
+        }
+
+        .reveal td {
+            border-bottom: 1px solid var(--glass-border);
+            padding: 10px;
+        }
+
+        /* Image Styling */
+        .reveal img {
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Layout Helpers */
+        .cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-small {
+            font-size: 0.7em;
+        }
+
+        .text-muted {
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide 1: Title -->
+            <section>
+                <h1>Topic 18E</h1>
+                <h3>Electron Transfer</h3>
+                <p class="text-muted">Reaction Dynamics &bull; Physical Chemistry</p>
+                <div class="glass-card" style="display: inline-block; margin-top: 2rem;">
+                    <p>Marcus Theory &amp; Biological Systems</p>
+                </div>
+            </section>
+
+            <!-- Slide 2: Overview -->
+            <section>
+                <h2>Electron Transfer (ET)</h2>
+                <div class="glass-card text-left">
+                    <p>The simplest class of reactions: just electron movement.</p>
+                    <div class="formula">
+                        $$D + A \to D^+ + A^-$$
+                    </div>
+                    <ul>
+                        <li><strong>Biology:</strong> Photosynthesis, Respiration.</li>
+                        <li><strong>Chemistry:</strong> Redox, Batteries.</li>
+                        <li><strong>Marcus Theory:</strong> Nobel Prize 1992.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 3: Franck-Condon Principle -->
+            <section>
+                <h2>Franck-Condon Principle</h2>
+                <div class="cols">
+                    <div class="text-left">
+                        <p>Electrons move much faster than nuclei.</p>
+                        <div class="highlight-box">
+                            <strong>Key Consequence:</strong><br>
+                            ET occurs at <strong>fixed nuclear geometry</strong>.<br>
+                            Nuclei must reorganize <em>before</em> the electron jumps.
+                        </div>
+                    </div>
+                    <div>
+                        <img src="images/marcus_parabolas_annotated.png" alt="Marcus Parabolas">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Reorganization Energy -->
+            <section>
+                <h2>Reorganization Energy ($\lambda$)</h2>
+                <p>The energy cost to rearrange nuclei.</p>
+                <div class="formula">
+                    $$\lambda = \lambda_{\text{in}} + \lambda_{\text{out}}$$
+                </div>
+                <div class="cols text-small">
+                    <div class="glass-card fragment">
+                        <h3>Inner Sphere ($\lambda_{\text{in}}$)</h3>
+                        <p>Bond lengths and angles changes.</p>
+                    </div>
+                    <div class="glass-card fragment">
+                        <h3>Outer Sphere ($\lambda_{\text{out}}$)</h3>
+                        <p>Solvent reorientation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: The Marcus Equation -->
+            <section>
+                <h2>The Marcus Equation</h2>
+                <p>Activation energy depends on driving force ($\Delta_r G^\circ$) and reorganization ($\lambda$):</p>
+                <div class="formula">
+                    $$\Delta G^\ddagger = \frac{(\Delta_r G^\circ + \lambda)^2}{4\lambda}$$
+                </div>
+                <div class="fragment">
+                    <p>Rate constant:</p>
+                    <div class="formula">
+                        $$k_{ET} \propto \exp\left(-\frac{\Delta G^\ddagger}{RT}\right)$$
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: Three Regimes -->
+            <section>
+                <h2>Three Regimes of ET</h2>
+                <div class="cols">
+                    <div class="text-left text-small">
+                        <ol>
+                            <li class="fragment"><strong>Normal Region:</strong><br>Rate increases with driving force.
+                            </li>
+                            <li class="fragment"><strong>Barrierless:</strong><br>Maximum rate at $-\Delta_r G^\circ =
+                                \lambda$.</li>
+                            <li class="fragment"><strong>Inverted Region:</strong><br>Rate <em>decreases</em> with
+                                driving force!</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <img src="images/marcus_regimes_comparison.png" alt="Marcus Regimes">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: The Inverted Region -->
+            <section>
+                <h2>The Inverted Region</h2>
+                <div class="glass-card text-left">
+                    <h3>Counter-Intuitive!</h3>
+                    <p>Making a reaction <em>more</em> exergonic can slow it down.</p>
+                    <p><strong>Why?</strong> The surfaces intersect at high energy because the product well is "too
+                        deep".</p>
+                </div>
+                <div class="highlight-box fragment">
+                    <strong>Biological Use:</strong><br>
+                    Nature uses the inverted region to prevent wasteful back-electron transfer in photosynthesis.
+                </div>
+            </section>
+
+            <!-- Slide 8: Distance Dependence -->
+            <section>
+                <h2>Distance Dependence</h2>
+                <div class="cols">
+                    <div class="text-left">
+                        <p>Electron must tunnel through the medium.</p>
+                        <div class="formula">
+                            $$k_{ET} \propto \exp(-\beta r)$$
+                        </div>
+                        <p class="text-small">Rate drops exponentially with distance.</p>
+                    </div>
+                    <div>
+                        <img src="images/distance_decay.png" alt="Distance Decay">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Interactive Resources -->
+            <section>
+                <h2>Interactive Learning</h2>
+                <div class="cols">
+                    <div class="text-left">
+                        <p>Explore these concepts in the Jupyter Notebook:</p>
+                        <ul>
+                            <li>Marcus Parabola Explorer</li>
+                            <li>Reorganization Calculator</li>
+                            <li>Inverted Region Visualizer</li>
+                            <li>Biological ET Chains</li>
+                        </ul>
+                        <a href="https://colab.research.google.com/github/mcbadlon31/Reaction-Dynamics-Physical-Chemistry/blob/main/notebooks/05_Electron_Transfer.ipynb"
+                            target="_blank" class="btn">Open in Colab</a>
+                    </div>
+                    <div>
+                        <div class="glass-card" style="padding: 10px; display: inline-block; background: white;">
+                            <img src="images/05_Electron_Transfer.png" alt="QR Code"
+                                style="box-shadow: none; margin: 0; width: 200px;">
+                        </div>
+                        <p class="text-small text-muted">Scan to open on mobile</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'convex',
+            backgroundTransition: 'zoom',
+            plugins: [RevealMath.KaTeX]
+        });
+    </script>
+</body>
+
+</html>
