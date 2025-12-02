@@ -290,6 +290,26 @@
                 <p class="text-small">This exponential factor dramatically reduces the effective rate.</p>
             </section>
 
+            <!-- Slide: Common Misconception -->
+            <section>
+                <h2>Misconception Alert!</h2>
+                <div class="glass-card" style="border-left: 4px solid #ef4444;">
+                    <p><strong>Myth:</strong> "Activation energy is the average energy of the molecules."</p>
+                </div>
+                <div class="fragment">
+                    <p class="text-left"><strong>Reality:</strong></p>
+                    <ul class="text-small">
+                        <li>$E_a$ is a <strong>threshold</strong> (minimum) energy.</li>
+                        <li>Average energy ($\approx 1.5 RT$) is usually much lower than $E_a$.</li>
+                        <li>Only the "lucky" few in the high-energy tail react.</li>
+                    </ul>
+                    <div class="highlight-box" style="margin-top: 1rem;">
+                        <strong>Analogy:</strong> High Jump. The bar is $E_a$. Most athletes can't clear it; only the
+                        elite few succeed.
+                    </div>
+                </div>
+            </section>
+
             <!-- Slide 9: Energy Distribution Graph -->
             <section>
                 <h2>Maxwell-Boltzmann Energy</h2>
@@ -301,6 +321,31 @@
                     <div>
                         <img src="images/maxwell_boltzmann_energy.png" alt="Energy Distribution">
                     </div>
+                </div>
+            </section>
+
+            <!-- Slide: Think-Pair-Share -->
+            <section>
+                <h2>Think-Pair-Share</h2>
+                <p class="text-left"><strong>Question:</strong> T increases from 300K to 310K (~3%). Rate doubles
+                    (~100%). Why?</p>
+                <div class="cols">
+                    <div class="text-left text-small">
+                        <ol type="A">
+                            <li>Collision frequency doubles.</li>
+                            <li>$E_a$ decreases.</li>
+                            <li>Fraction with $E > E_a$ increases exponentially.</li>
+                            <li>Molecules get bigger.</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <img src="images/maxwell_boltzmann_energy.png" alt="Energy Distribution" style="width: 80%;">
+                    </div>
+                </div>
+                <div class="fragment glass-card" style="margin-top: 1rem;">
+                    <p><strong>Answer: (C)</strong></p>
+                    <p class="text-small text-muted">The exponential factor $e^{-E_a/RT}$ is extremely sensitive to
+                        temperature changes.</p>
                 </div>
             </section>
 

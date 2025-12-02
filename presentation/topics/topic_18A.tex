@@ -322,6 +322,32 @@ Using the formula: $Z_{N_2-N_2} = \frac{1}{2} \sigma \bar{v}_{rel} \mathcal{N}^2
 \end{frame}
 
 % ===========================================================================
+% Slide: Common Misconception - Activation Energy
+% ===========================================================================
+\begin{frame}{Common Misconception: Activation Energy}
+
+\begin{alertblock}{Misconception Alert!}
+\textbf{Myth:} "Activation energy is the average energy of the molecules."
+\end{alertblock}
+
+\vspace{0.3cm}
+
+\textbf{Reality:}
+\begin{itemize}
+\item $E_a$ is a \textbf{threshold} energy, not an average.
+\item It is the \textit{minimum} energy required for a specific collision to react.
+\item The average energy $\langle \varepsilon \rangle = \frac{3}{2}\kB T$ is usually much \textit{lower} than $E_a$.
+\item Only the "lucky" molecules in the high-energy tail of the distribution react.
+\end{itemize}
+
+\vspace{0.3cm}
+
+\centering
+\textbf{Analogy:} High jump bar. The bar height is $E_a$. Most athletes (molecules) can't clear it; only the elite few (high energy tail) succeed.
+
+\end{frame}
+
+% ===========================================================================
 % Slide: Energy Distribution
 % ===========================================================================
 \begin{frame}{Maxwell-Boltzmann Energy Distribution}
@@ -774,6 +800,38 @@ From collision theory: $k = A T^{1/2} e^{-E_a/RT}$
 \end{axis}
 \end{tikzpicture}
 \end{columns}
+
+\end{frame}
+
+% ===========================================================================
+% Slide: Think-Pair-Share - Temperature Dependence
+% ===========================================================================
+\begin{frame}{Think-Pair-Share: Temperature Effects}
+
+\begin{columns}[T]
+\column{0.6\textwidth}
+\textbf{Question:}
+When temperature increases from 300 K to 310 K (a ~3\% increase), reaction rates often double (~100\% increase).
+
+\vspace{0.2cm}
+
+\textbf{Why is the effect so dramatic?}
+\begin{enumerate}
+\item[(A)] Collision frequency $Z_{AB}$ doubles.
+\item[(B)] The activation energy $E_a$ decreases.
+\item[(C)] The fraction of molecules with $E > E_a$ increases exponentially.
+\item[(D)] Molecules get bigger (larger $\sigma$).
+\end{enumerate}
+
+\column{0.4\textwidth}
+\centering
+\includegraphics[width=0.9\textwidth]{Reaction_Dynamics_Interactive/images/maxwell_boltzmann_energy.png}
+\end{columns}
+
+\vspace{0.3cm}
+
+\pause
+\textbf{Answer:} \textbf{(C)}. $Z_{AB} \propto \sqrt{T}$, so it only increases by $\sim 1.5\%$. The exponential factor $e^{-E_a/RT}$ is extremely sensitive to $T$.
 
 \end{frame}
 
